@@ -1,10 +1,21 @@
 .App {
   text-align: center;
+  list-style: none;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.ul {
+  list-style: none;
+}
+
+.ul > li {
+  border: 1px solid;
+  margin: 0.2rem;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +37,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.square {
+  background-color: #fff;
+  padding: 0.33rem;
+  padding: 2rem;
 }
 
 @keyframes App-logo-spin {

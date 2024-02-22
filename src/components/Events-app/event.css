@@ -1,0 +1,54 @@
+.close {
+  text-align: end;
+  margin: 0rem 2rem;
+  padding: 0rem 1rem;
+}
+
+.close > span {
+  background-color: #7d8082;
+  padding: 0.51rem;
+  border-radius: 50%;
+}
+.container {
+  width: 80srem;
+  background-color: #ccc5c5;
+  margin: 0rem 6rem;
+  border-radius: 0.5rem;
+  padding: 4.2rem 2rem;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.numbers > div {
+  font-size: 1rem;
+  background-color: #7d8082;
+  padding: 1rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.numbers > .active {
+  background-color: #644dba;
+  color: #fff;
+}
+
+.message {
+  font-size: 1.6rem;
+  margin: 1rem auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons > button {
+  border: none;
+  padding: 0.91rem;
+  background-color: #644dba;
+  border-radius: 0.2rem;
+  color: #fff;
+}
