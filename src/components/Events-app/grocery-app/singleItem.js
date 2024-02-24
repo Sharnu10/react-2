@@ -1,6 +1,9 @@
-export default function SingleItem({ item, deleteItem }) {
+export default function SingleItem({ item, deleteItem, onItemSelected }) {
   return (
     <div className="item">
+      <div>
+        <input type="checkbox" onClick={() => onItemSelected(item.id)} />
+      </div>
       <div>{item.name}</div>
       <div> {item.quantity}</div>
       <div> rs. {item.price} </div>

@@ -17,6 +17,14 @@ function GroceryHome() {
     setItems((items) => items.filter((item) => item.id !== id));
   }
 
+  function onItemSelected(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, selected: !item.selected } : item
+      )
+    );
+  }
+
   return (
     <>
       <div className="grocery-container">
@@ -26,11 +34,15 @@ function GroceryHome() {
         <div className="item-add-list">
           <AddItem addItem={addItem} />
 
-          <ItemList items={items} deleteItem={deleteItem} />
+          <ItemList
+            items={items}
+            deleteItem={deleteItem}
+            onItemSelected={onItemSelected}
+          />
         </div>
 
         <div className="footer">
-          <Footer />
+          <Footer items={items} />
         </div>
       </div>
     </>
