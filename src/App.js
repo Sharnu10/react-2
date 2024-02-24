@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import FilterableProductTable from "./components/Products/FilterableProductTable";
 import Event from "./components/Events-app/event";
+import GroceryHome from "./components/Events-app/grocery-app/grocery-home";
 
 export function Square() {
   const [value, setValue] = useState(null);
@@ -63,6 +64,9 @@ function App() {
               <li>
                 <Link to="/event-app">Event</Link>
               </li>
+              <li>
+                <Link to="/grocery">Grocery</Link>
+              </li>
             </ul>
           </div>
           <Routes>
@@ -70,6 +74,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/filterProduct" element={<FilterableProductTable />} />
             <Route path="/event-app" element={<Event />} />
+            <Route path="/grocery" element={<GroceryHome />} />
           </Routes>
         </BrowserRouter>
       </div>

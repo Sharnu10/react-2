@@ -1,0 +1,53 @@
+.grocery-container {
+  box-sizing: border-box;
+  background-color: #eee;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.header {
+  background-color: #e12647b2;
+  padding: 1rem 0rem;
+  font-size: 1.6rem;
+}
+
+.item-add-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* add-items */
+
+.button {
+  background-color: #6a6ace;
+  border: none;
+  padding: 0.61rem;
+  margin: 1rem 0rem;
+  border-radius: 0.51rem;
+  width: 6rem;
+  color: #fff;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 24rem;
+  margin: 0.3rem 0rem;
+}
+
+.item:nth-child(even) {
+  background-color: #bbb;
+}
+
+.item .close-item {
+  padding-right: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.total {
+  margin: 1rem 0;
+  text-align: end;
+}
