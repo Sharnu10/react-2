@@ -1,6 +1,6 @@
 import SingleItem from "./singleItem";
 
-function ItemList({ items, deleteItem }) {
+function ItemList({ items, deleteItem, onItemSelected }) {
   let totalPrice = items.reduce((acc, item) => {
     return (acc += item.price * item.quantity);
   }, 0);
@@ -12,7 +12,12 @@ function ItemList({ items, deleteItem }) {
     <div>
       <h3>Items List</h3>
       {items?.map((item) => (
-        <SingleItem key={item.id} item={item} deleteItem={deleteItem} />
+        <SingleItem
+          key={item.id}
+          item={item}
+          deleteItem={deleteItem}
+          onItemSelected={onItemSelected}
+        />
       ))}
 
       <div className="total">

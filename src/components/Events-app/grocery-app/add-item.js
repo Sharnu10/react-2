@@ -9,7 +9,7 @@ function AddItem({ addItem }) {
   function onSubmit(event) {
     event.preventDefault();
     if (name === "") return;
-    const item = { name, quantity, price, id: Date.now() };
+    const item = { name, quantity, price, id: Date.now(), selected: false };
     addItem(item);
     setName("");
     setQuantity(0);
