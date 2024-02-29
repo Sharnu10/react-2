@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import "./App.css";
@@ -8,43 +7,7 @@ import FilterableProductTable from "./components/Products/FilterableProductTable
 import Event from "./components/Events-app/event";
 import GroceryHome from "./components/Events-app/grocery-app/grocery-home";
 import TabbingHome from "./components/tabbing-app/tabbing-home";
-
-export function Square() {
-  const [value, setValue] = useState(null);
-
-  function handleClick() {
-    value === "X" ? setValue(null) : setValue("X");
-  }
-
-  return (
-    <button className="square" onClick={handleClick}>
-      {" "}
-      {value}{" "}
-    </button>
-  );
-}
-
-export function Board() {
-  return (
-    <>
-      <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-      </div>
-      <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-      </div>
-      <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-      </div>
-    </>
-  );
-}
+import BillHome from "./components/Bill-details/bill-home";
 
 function App() {
   return (
@@ -71,6 +34,9 @@ function App() {
               <li>
                 <Link to="/tabbingHome">Tabbing Home</Link>
               </li>
+              <li>
+                <Link to="/billHome"> Bill Details</Link>
+              </li>
             </ul>
           </div>
           <Routes>
@@ -80,6 +46,7 @@ function App() {
             <Route path="/event-app" element={<Event />} />
             <Route path="/grocery" element={<GroceryHome />} />
             <Route path="/tabbingHome" element={<TabbingHome />} />
+            <Route path="/billHome" element={<BillHome />} />
           </Routes>
         </BrowserRouter>
       </div>

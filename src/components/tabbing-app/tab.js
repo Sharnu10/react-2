@@ -1,6 +1,9 @@
-export default function Tab({ tab, onSelectTab }) {
+export default function Tab({ tab, tabIndex, onSelectTab }) {
   return (
-    <div className="tab" onClick={() => onSelectTab(tab.id)}>
+    <div
+      onClick={() => onSelectTab(tab.id)}
+      className={`tab ${tabIndex === tab.id ? "highlightTab" : ""}`}
+    >
       {tab.title}
     </div>
   );
