@@ -12,6 +12,10 @@
   list-style: none;
 }
 
+.navigatingItems {
+  display: flex;
+}
+
 .ul > li {
   border: 1px solid;
   margin: 0.2rem;
@@ -57,4 +61,18 @@
 /*  Bill details */
 
 .add-friend {
+}
+
+/* books db */
+.navbar {
+  background-color: #3b32b7;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.8rem;
+}
+
+.book-body {
+  text-align: justify;
 }

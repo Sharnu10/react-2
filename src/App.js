@@ -8,6 +8,7 @@ import Event from "./components/Events-app/event";
 import GroceryHome from "./components/Events-app/grocery-app/grocery-home";
 import TabbingHome from "./components/tabbing-app/tabbing-home";
 import BillHome from "./components/Bill-details/bill-home";
+import BooksDB from "./components/Books-db/booksdb-home";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <div className="c">
         <BrowserRouter>
           <div>
-            <ul className="ul">
+            <ul className="ul navigatingItems">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -37,6 +38,9 @@ function App() {
               <li>
                 <Link to="/billHome"> Bill Details</Link>
               </li>
+              <li>
+                <Link to="/booksdb">Books DB</Link>
+              </li>
             </ul>
           </div>
           <Routes>
@@ -47,6 +51,7 @@ function App() {
             <Route path="/grocery" element={<GroceryHome />} />
             <Route path="/tabbingHome" element={<TabbingHome />} />
             <Route path="/billHome" element={<BillHome />} />
+            <Route path="/booksdb" element={<BooksDB />} />
           </Routes>
         </BrowserRouter>
       </div>
