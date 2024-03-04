@@ -2,7 +2,7 @@ import AddFriend from "./add-friends";
 import ShareBill from "./share-bill";
 import FriendBill from "./friend-list";
 import { useState } from "react";
-import "../../App.css";
+import "../../App.scss";
 
 export default function BillHome() {
   const [friends, setFriends] = useState([]);
