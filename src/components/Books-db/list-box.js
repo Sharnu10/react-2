@@ -1,9 +1,10 @@
-import BooksList from "./books-list";
+import ToggleButton from "./toggle-button";
 
-export default function ListBox({ booksData }) {
+export default function ListBox({ showData, handleBtnToggle, children }) {
   return (
     <div className="box">
-      <BooksList booksData={booksData} />
+      <ToggleButton isOpen={showData} handleBtnToggle={handleBtnToggle} />
+      {showData && children}
     </div>
   );
 }

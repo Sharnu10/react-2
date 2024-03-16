@@ -1,3 +1,3 @@
-export default function Number() {
-  return <div> Found X Results </div>;
+export default function NumberResult({ books }) {
+  return <div> Found {books?.length} Results </div>;
 }

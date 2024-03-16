@@ -1,9 +1,3 @@
-import ListBox from "./list-box";
-
-export default function Main({ booksData }) {
-  return (
-    <div className="main">
-      <ListBox booksData={booksData} />
-    </div>
-  );
+export default function Main({ children }) {
+  return <div className="main-books">{children}</div>;
 }
